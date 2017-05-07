@@ -6,14 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./app/users/routes');
 
 var mongoose = require('mongoose');
 
 var app = express();
 
 // mongodb engine setup
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/node_blog');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
